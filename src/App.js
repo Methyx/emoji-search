@@ -12,11 +12,14 @@ function App() {
   return (
     <div className="App">
       <Search txtSearch={txtSearch} setTxtSearch={setTxtSearch} />
-      {data.map((item) => {
+      {data.map((item, index) => {
         if (item.keywords.includes(txtSearch)) {
-          return <Line emoji={{ title: item.title, symbol: item.symbol }} />;
-        } else {
-          return;
+          return (
+            <Line
+              key={index}
+              emoji={{ title: item.title, symbol: item.symbol }}
+            />
+          );
         }
       })}
     </div>
