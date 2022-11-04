@@ -15,6 +15,8 @@ function App() {
       {data.map((item) => {
         if (item.keywords.includes(txtSearch)) {
           return <Line emoji={{ title: item.title, symbol: item.symbol }} />;
+        } else {
+          return;
         }
       })}
     </div>
