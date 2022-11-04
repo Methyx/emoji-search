@@ -20,6 +20,8 @@ function App() {
               emoji={{ title: item.title, symbol: item.symbol }}
             />
           );
+        } else {
+          return null;
         }
       })}
     </div>
